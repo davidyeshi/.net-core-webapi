@@ -13,6 +13,11 @@ namespace Supermarket.Persistence.Repositories
     {
         public CategoryRepository(AppDbContext context) : base(context) { }
 
+        public async Task AddAsync(Category category)
+        {
+            await _context.Categories.AddAsync(category);
+        }
+
         public async Task<IEnumerable<Category>> ListAsync()
         {
             // We use the Categories database saet to accesss

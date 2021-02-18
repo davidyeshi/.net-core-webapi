@@ -47,6 +47,7 @@ namespace Supermarket
             // Also bind our service and respository to respective classes.
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddControllers();
 
@@ -54,6 +55,7 @@ namespace Supermarket
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new ModelToResourceProfile());
+                mc.AddProfile(new ResourceToModelProfile());
             });
 
             IMapper mapper = mapperConfig.CreateMapper();

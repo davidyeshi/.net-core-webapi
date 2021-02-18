@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Supermarket.Domain.Models;
+using Supermarket.Domain.Services.Communication;
 
 namespace Supermarket.Domain.Services
 {
@@ -10,5 +11,8 @@ namespace Supermarket.Domain.Services
     {
         // method must asynchronously return an enumeration of categories
         Task<IEnumerable<Category>> ListAsync();
+
+        // Add the save method
+        Task<SaveCategoryResponse> SaveAsync(Category category);
     }
 }
