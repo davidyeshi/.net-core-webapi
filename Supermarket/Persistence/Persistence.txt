@@ -1,0 +1,2 @@
+﻿This folder is going to have everything we need to access the database, such as
+repositories implementations.

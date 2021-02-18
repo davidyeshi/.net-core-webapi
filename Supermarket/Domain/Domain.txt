@@ -1,0 +1,2 @@
+﻿This layer will have our models classes, the classes that will represent our products and categories,
+as well as repositories and services interfaces.

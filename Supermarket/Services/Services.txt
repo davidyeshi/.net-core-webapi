@@ -1,0 +1,9 @@
+﻿In this folder we'll put all service implementations.
+
+A service class is not a class that should handle data access.
+There is apattern called Repository Pattern that is used to manage data from databases.
+When using the Repository Pattern, we define repository classes, that basically 
+encapsulate all logic to handle data access. These repositories expose methods to list, 
+create, edit and delete objects of a given model, the same way you can manipulate 
+collections. Internally, these methods talk to the database to perform CRUD operations, 
+isolating the database access from the rest of the application.
