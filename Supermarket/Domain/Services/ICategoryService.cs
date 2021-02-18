@@ -14,5 +14,7 @@ namespace Supermarket.Domain.Services
 
         // Add the save method
         Task<SaveCategoryResponse> SaveAsync(Category category);
+        Task<SaveCategoryResponse> UpdateAsync(int id, Category category);
+
     }
 }

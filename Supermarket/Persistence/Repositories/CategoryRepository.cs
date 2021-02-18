@@ -26,5 +26,15 @@ namespace Supermarket.Persistence.Repositories
             // transforming the result of a query into a collection of categories.
             return await _context.Categories.ToListAsync();
         }
+
+        public async Task<Category> FindByIdAsync(int id)
+        {
+            return await _context.Categories.FindAsync(id);
+        }
+
+        public void Update(Category category)
+        {
+            _context.Categories.Update(category);
+        }
     }
 }
